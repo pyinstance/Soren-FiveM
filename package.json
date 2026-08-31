@@ -1,0 +1,86 @@
+{
+  "name": "soren-fivem",
+  "version": "1.8.0",
+  "description": "Soren FiveM \u2014 a lightweight FiveM/GTA pack discovery, inspection and installer desktop app with a live GitHub catalogue.",
+  "main": "electron/main.cjs",
+  "author": "@misty",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\"",
+    "build": "vite build",
+    "start": "electron .",
+    "dist": "npm run build && electron-builder --win nsis portable --x64",
+    "dist:dir": "npm run build && electron-builder --win dir",
+    "dist:installer": "npm run build && electron-builder --win nsis --x64",
+    "dist:portable": "npm run build && electron-builder --win portable --x64"
+  },
+  "dependencies": {
+    "7zip-bin": "^5.2.0",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "node-unrar-js": "^2.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "vite": "^6.0.5",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "com.soren.fivem",
+    "productName": "Soren FiveM",
+    "asar": false,
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "assets/**/*",
+      "package.json",
+      "node_modules/node-unrar-js/**/*",
+      "catalog-source.json",
+      "security/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "catalog",
+        "to": "catalog"
+      },
+      {
+        "from": "node_modules/7zip-bin",
+        "to": "7zip-bin"
+      }
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/soren.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Soren FiveM",
+      "uninstallDisplayName": "Soren FiveM",
+      "runAfterFinish": true
+    }
+  }
+}

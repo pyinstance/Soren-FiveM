@@ -1,0 +1,40 @@
+{
+  "algorithm": "SHA-256 + Ed25519",
+  "developer": "@misty",
+  "files": [
+    {
+      "path": "electron/main.cjs",
+      "sha256": "d67330cdf5ac41501553d3a77c544fa0c172b086d68dcbd3a273da3ff5294c25"
+    },
+    {
+      "path": "electron/preload.cjs",
+      "sha256": "c8cb0cf3b2484ca1e3f3a65b3aabd6e60f4daea9ae6fdf8f0b6df8eba9a7439c"
+    },
+    {
+      "path": "electron/archive-worker.cjs",
+      "sha256": "f8fbcd0bd58177ae983cd05cf5750eb0767a482ebde9b2adecb5768305ec846d"
+    },
+    {
+      "path": "electron/splash.html",
+      "sha256": "ac35bb5fee165b3d866dd4818224fcfd7b5a6fd4ac92984f1a057bd57a8e0410"
+    },
+    {
+      "path": "package.json",
+      "sha256": "ee8380981b3b405d14ae9d1b67f0a38509d8678002490a0abfc1f63dfaf4a36e"
+    },
+    {
+      "path": "assets/soren-logo.png",
+      "sha256": "b758bc0dee22a18ce7989e955b15bf052ffe0aa4ad769a1742024a67f1b12f4d"
+    },
+    {
+      "path": "assets/soren.ico",
+      "sha256": "d587e3bfeb94973d7213097cfe90de7841b00a5f5b34d482dcd4eece46840983"
+    },
+    {
+      "path": "catalog-source.json",
+      "sha256": "53cda8fc550bf1e15f7f46f17d20748ac5651f86306bc900a739391e86f54d68"
+    }
+  ],
+  "product": "Soren FiveM",
+  "version": "1.8.0"
+}

@@ -1,0 +1,8 @@
+{
+  "provider": "github",
+  "owner": "pyinstance",
+  "repo": "Soren-FiveM",
+  "branch": "main",
+  "path": "catalog",
+  "refreshMinutes": 10
+}
