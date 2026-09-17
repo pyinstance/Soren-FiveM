@@ -555,6 +555,10 @@ button { -webkit-tap-highlight-color: transparent; }
 .info-row { min-height: 42px; border-bottom: 0; }
 .restore-row { border-bottom: 0; }
 .plain-section { margin-top: 20px; }
+.settings-details { margin-top: 10px; border-top: 1px solid var(--line-soft); }
+.settings-details summary { width: fit-content; padding: 11px 0; color: #989898; font-size: 12px; cursor: pointer; list-style-position: inside; }
+.settings-details summary:hover { color: #e0e0e0; }
+.settings-details .restore-row { min-height: 58px; }
 .section-heading { padding-top: 8px; }
 .settings-inline-actions { display: flex; gap: 12px; margin-top: 8px; }
 

@@ -1,6 +1,6 @@
 {
   "name": "soren-fivem",
-  "version": "3.1.7",
+  "version": "3.1.8",
   "description": "Soren FiveM — minimal black & white FiveM pack manager with cloud accounts, server quick launch, live player counts, backups and safe install recovery.",
   "main": "electron/main.cjs",
   "author": "@sob",
