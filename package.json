@@ -1,9 +1,9 @@
 {
   "name": "soren-fivem",
-  "version": "1.8.0",
-  "description": "Soren FiveM \u2014 a lightweight FiveM/GTA pack discovery, inspection and installer desktop app with a live GitHub catalogue.",
+  "version": "3.1.7",
+  "description": "Soren FiveM — minimal black & white FiveM pack manager with cloud accounts, server quick launch, live player counts, backups and safe install recovery.",
   "main": "electron/main.cjs",
-  "author": "@misty",
+  "author": "@sob",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\"",
@@ -40,14 +40,9 @@
       "assets/**/*",
       "package.json",
       "node_modules/node-unrar-js/**/*",
-      "catalog-source.json",
       "security/**/*"
     ],
     "extraResources": [
-      {
-        "from": "catalog",
-        "to": "catalog"
-      },
       {
         "from": "node_modules/7zip-bin",
         "to": "7zip-bin"

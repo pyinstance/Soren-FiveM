@@ -3,12 +3,15 @@ setlocal EnableExtensions
 cd /d "%~dp0"
 title Soren FiveM - Windows EXE Builder
 
+set "MODE=%~1"
+if "%MODE%"=="" set "MODE=both"
+
 :: electron-builder's winCodeSign package contains symlinks. Windows normally
 :: requires an elevated process (or Developer Mode) to extract them correctly.
 powershell -NoProfile -NonInteractive -Command "$p=New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent()); if($p.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){exit 0}else{exit 1}"
 if errorlevel 1 (
   echo Requesting Administrator permission for the Windows packaging tools...
-  powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Process -FilePath '%~f0' -Verb RunAs"
+  powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Process -FilePath '%~f0' -ArgumentList '%MODE%' -Verb RunAs"
   exit /b
 )
 
@@ -29,9 +32,6 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-
-set "MODE=%~1"
-if "%MODE%"=="" set "MODE=both"
 
 echo.
 echo ==========================================

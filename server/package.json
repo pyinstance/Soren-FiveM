@@ -1,0 +1,18 @@
+{
+  "name": "soren-cloud-server",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Soren FiveM account, Discord verification and cloud pack storage backend.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node --check index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0"
+  }
+}

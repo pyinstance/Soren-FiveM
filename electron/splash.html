@@ -4,26 +4,20 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; style-src 'unsafe-inline'; img-src 'self' data:;" />
   <style>
-    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}body{display:grid;place-items:center;background:#0b090a;color:#f4eff0;font-family:"Segoe UI Variable","Segoe UI",system-ui,sans-serif;overflow:hidden}
-    .wrap{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #2d2023;background:#100c0d;border-radius:12px}
-    img{width:57px;height:57px;object-fit:contain;margin-bottom:10px;animation:enter .28s cubic-bezier(.2,.75,.2,1) both}
-    h1{font-size:16px;line-height:1;margin:0;font-weight:650;letter-spacing:-.02em}
-    p{font-size:8px;color:#897b7e;margin:6px 0 14px}
-    .line{width:108px;height:3px;border-radius:999px;background:#2a1d20;overflow:hidden}
-    .line:after{content:"";display:block;width:34%;height:100%;border-radius:inherit;background:#8f2f3f;animation:load 1.05s ease-in-out infinite}
-    .ver{position:absolute;bottom:10px;color:#66585b;font-size:7px}
-    @keyframes enter{from{opacity:0;transform:translateY(3px) scale(.985)}to{opacity:1;transform:none}}
-    @keyframes load{0%{transform:translateX(-120%)}60%,100%{transform:translateX(330%)}}
-    @media (prefers-reduced-motion:reduce){img,.line:after{animation:none}.line:after{width:100%;opacity:.6}}
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}
+    body{display:grid;place-items:center;background:#050505;color:#f2f2f2;font-family:"Segoe UI Variable","Segoe UI",system-ui,sans-serif;overflow:hidden}
+    .wrap{width:100%;height:100%;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#080808;border:1px solid #222;border-radius:12px;animation:fade .22s ease-out both}
+    img{width:54px;height:54px;object-fit:contain;margin-bottom:14px;filter:grayscale(1) brightness(2.25) contrast(1.25);animation:mark .45s cubic-bezier(.2,.8,.2,1) both}
+    h1{font-size:18px;line-height:1;margin:0;font-weight:650;letter-spacing:-.025em}
+    p{font-size:12px;color:#777;margin:7px 0 16px}
+    .line{width:118px;height:2px;background:#202020;overflow:hidden;border-radius:999px}
+    .line:after{content:"";display:block;width:30%;height:100%;background:#eee;border-radius:inherit;animation:load 1s ease-in-out infinite}
+    .ver{position:absolute;bottom:12px;color:#666;font-size:10.5px}
+    @keyframes fade{from{opacity:0}to{opacity:1}}
+    @keyframes mark{from{opacity:0;transform:translateY(5px) scale(.97)}to{opacity:1;transform:none}}
+    @keyframes load{0%{transform:translateX(-140%)}65%,100%{transform:translateX(430%)}}
+    @media(prefers-reduced-motion:reduce){.wrap,img,.line:after{animation:none}.line:after{width:100%;opacity:.55}}
   </style>
 </head>
-<body>
-  <div class="wrap">
-    <img src="../assets/soren-logo.png" alt="" />
-    <h1>Soren FiveM</h1>
-    <p>Preparing library</p>
-    <div class="line"></div>
-    <span class="ver">v1.8.0</span>
-  </div>
-</body>
+<body><div class="wrap"><img src="../assets/soren-logo.png" alt=""/><h1>Soren FiveM</h1><p>Preparing your library</p><div class="line"></div><span class="ver">v3.0.1</span></div></body>
 </html>

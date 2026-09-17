@@ -1,40 +1,39 @@
 {
   "algorithm": "SHA-256 + Ed25519",
   "developer": "@misty",
+  "version": "3.1.3",
   "files": [
     {
       "path": "electron/main.cjs",
-      "sha256": "d67330cdf5ac41501553d3a77c544fa0c172b086d68dcbd3a273da3ff5294c25"
+      "sha256": "5f3d90122f299313b458f2d1df07d9205a86f2aeca2b2d8bb28b1478fbe6f662"
     },
     {
       "path": "electron/preload.cjs",
-      "sha256": "c8cb0cf3b2484ca1e3f3a65b3aabd6e60f4daea9ae6fdf8f0b6df8eba9a7439c"
+      "sha256": "bf0f445c360e3655485b119fcb1dd34853df77c94447b8545c606c431c5b2d0e"
     },
     {
       "path": "electron/archive-worker.cjs",
       "sha256": "f8fbcd0bd58177ae983cd05cf5750eb0767a482ebde9b2adecb5768305ec846d"
     },
     {
+      "path": "electron/account-cloud.cjs",
+      "sha256": "ba45f13dce77dd7d87a7029f977ac15e12288483612d4eb78b890ab656025ce5"
+    },
+    {
       "path": "electron/splash.html",
-      "sha256": "ac35bb5fee165b3d866dd4818224fcfd7b5a6fd4ac92984f1a057bd57a8e0410"
+      "sha256": "c9e5d8cf847134c92d60090ed9591e87284be51df9b96511b8ef410d06d8d28b"
+    },
+    {
+      "path": "electron/server-launch.html",
+      "sha256": "3875640ef1b011d8371041c4719454c060cfe148929822394236d399a2cea178"
     },
     {
       "path": "package.json",
-      "sha256": "ee8380981b3b405d14ae9d1b67f0a38509d8678002490a0abfc1f63dfaf4a36e"
+      "sha256": "d4be4f4cce869233b2ebc7eab54c161c4d9c72f7bbbc45907c1952444cd90af9"
     },
     {
       "path": "assets/soren-logo.png",
-      "sha256": "b758bc0dee22a18ce7989e955b15bf052ffe0aa4ad769a1742024a67f1b12f4d"
-    },
-    {
-      "path": "assets/soren.ico",
-      "sha256": "d587e3bfeb94973d7213097cfe90de7841b00a5f5b34d482dcd4eece46840983"
-    },
-    {
-      "path": "catalog-source.json",
-      "sha256": "53cda8fc550bf1e15f7f46f17d20748ac5651f86306bc900a739391e86f54d68"
+      "sha256": "7dca118a8d23a9f52515b902ed798df8c98d103de04745d6cf70019e8ee6e2e8"
     }
-  ],
-  "product": "Soren FiveM",
-  "version": "1.8.0"
+  ]
 }
